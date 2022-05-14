@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="form">
+        <div>
+            <img src="../../../assets/icon6.png"/>
+        </div>
+        <form #add="ngForm">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="Name" name="name"
+                 [(ngModel)]="std.name" #name="ngModel" required minlength="3" value={{std.name}>
+            </div>
+            <div class="val alert alert-danger" *ngIf="name.errors?.['required'] && name.touched">
+                <span >Name Is Required</span>
+            </div>
+            <div class="val alert alert-danger" *ngIf="name.errors?.['minlength'] && name.touched">
+                <span >Min Length Is 3</span>
+            </div>
+            
+            <div class="input-group flex-nowrap">
+                <input type="number" class="form-control" placeholder="Age" name="age"
+                 [(ngModel)]="std.age" #age="ngModel" required min="20" max="30" value={{std.age}>
+            </div>
+            <div class="val alert alert-danger" *ngIf="age.errors?.['required'] && age.touched">
+                <span >Age Is Required</span>
+            </div>
+            <div class="val alert alert-danger" *ngIf="age.errors?.['min'] && age.touched">
+                <span >Min Age Is 20</span>
+            </div>
+            <div class="val alert alert-danger" *ngIf="age.errors?.['max'] && age.touched">
+                <span >Max Age Is 30</span>
+            </div>
+            <div class="btns">
+                <button class="btn" (click)="Edit()">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

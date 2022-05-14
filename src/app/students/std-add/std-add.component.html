@@ -1,0 +1,46 @@
+<div class="container">
+   <div class="form" >
+        <div>
+            <img src="../../../assets/icon3.png"/>
+        </div>
+        <form #add="ngForm" (ngSubmit)="add.form.valid && onSubmit(add.value)">
+            <div class="input-group flex-nowrap">
+                <input type="number" class="form-control" placeholder="Id" name="id" #idRef
+                [(ngModel)]="std.id" #id="ngModel" required min="100">
+            </div>
+            <div class="val alert alert-danger" *ngIf="(id.touched ||add.submitted) && id.errors?.['required'] ">
+                <span >Id Is Required</span>
+            </div>
+            <div class="val alert alert-danger" *ngIf="(id.touched ||add.submitted)&& id.errors?.['min'] ">
+                <span >Min Id Is 100</span>
+            </div>
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="Name" name="name" #nameRef
+                [(ngModel)]="std.name" #name="ngModel" required minlength="3">
+            </div>
+            <div class="val alert alert-danger" *ngIf="(name.touched ||add.submitted) &&name.errors?.['required']">
+                <span >Name Is Required</span>
+            </div>
+            <div class="val alert alert-danger" *ngIf="(name.touched ||add.submitted) &&name.errors?.['minlength']">
+                <span >Min Length Is 3</span>
+            </div>
+            
+            <div class="input-group flex-nowrap">
+                <input type="number" class="form-control" placeholder="Age" name="age" #ageRef
+                [(ngModel)]="std.age" #age="ngModel" required min="20" max="30">
+            </div>
+            <div class="val alert alert-danger" *ngIf="(age.touched ||add.submitted) &&age.errors?.['required']">
+                <span >Age Is Required</span>
+            </div>
+            <div class="val alert alert-danger" *ngIf="(age.touched ||add.submitted)&&age.errors?.['min'] ">
+                <span >Min Age Is 20</span>
+            </div>
+            <div class="val alert alert-danger" *ngIf="(age.touched ||add.submitted)&&age.errors?.['max']">
+                <span >Max Age Is 30</span>
+            </div>
+            <div  class="btns">
+                <button class="btn" >Add</button>
+            </div>
+        </form>
+   </div>
+</div>

@@ -1,0 +1,19 @@
+.container{
+    margin-top: 150px;
+    padding: 20px;
+    flex-direction: column;
+    
+}
+img{
+    width: 400px;
+    height: 400px;
+}
+.txt{
+    text-align: center;
+    width: 100%;
+    margin-left: 35px;
+}
+h3{
+    color: #76D7BD;
+    font-size: 25px;
+}

@@ -1,1 +1,198 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background-image: url('./assets/hero-bg.png');
+}
+/*==========List======================*/
+.container{
+    margin-top: 40px;
+    /* border: 1px solid black;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+table{
+    border: 1px solid #e9ecef;    
+}
+table th{
+    background-color: #76D4BD;
+    color: #fff;
+  
+}
+ .btns{
+   text-align: center;
+   display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.lastTR{
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+.btns button,
+.lastTR .add
+{
+    background-color: #76D4BD;
+    border: 1px solid #76D4BD;
+    width: 150px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px #ccc;
+    color: #fff;
+    
+}
+.lastTR .add:hover,
+.btns button:hover
+{
+    background-color: #69c1ab;
+    border: 1px solid #69c1ab;
+    color: #fff;
+}
+.btn-secondary,
+.btn-warning,
+.btn-danger{
+    padding-right: 10px;
+    color: #fff;
+}
+/*==========Edit-Add======================*/
+.form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10px;
+    box-shadow: 5px 5px 10px #ccc;
+    border-radius: 10px;
+    
+}
+ form{
+    text-align: center;
+   
+}
+input{
+    box-shadow: 2px 2px 5px #ccc;
+}
+input.ng-valid.ng-touched{
+    border: 2px solid #76D4BD;
+    
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(146, 42, 42);
+}
+.val{
+    margin-top: 10px;
+    height: 40px; 
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 80px;
+    height: 80px;
+    margin-top: -120px;
+}
+
+/*==========Details-Delete======================*/
+.details{
+    border: 1px solid #dadbdd;
+    padding: 20px;
+    box-shadow: 3px 3px 5px #ccc;
+   
+}
+.stdDetails{
+    display: flex;
+}
+p{
+    font-weight: 500;
+}
+h1{
+    border-bottom: 1px solid #dadbdd;
+    padding:10px 0;
+    color: #76D4BD;
+}
+.link
+{
+    color: #76D4BD;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 450;
+}
+.link:hover{
+    color: #69c1ab;
+}
+
+
+/*Media Query*/
+
+@media (min-width: 0) { 
+    table
+    {
+        width:100%
+    }
+  
+    td{
+        padding: 12px !important;
+    }
+    th{
+        padding: 15px !important;
+    }
+    .btn-secondary,
+    .btn-warning,
+    .btn-danger{
+        width: 71px;
+    }
+    .form{
+        width: 70vw;
+    }
+    form{
+        width: 80%;
+    }
+    .details{
+        width: 70vw;
+    }
+    .filter{
+        width: 100%;
+     }
+}
+@media (min-width: 768px) { 
+    table
+    {
+        width:70%
+    }
+     
+    td{
+        padding: 15px !important;
+    }
+    th{
+        padding: 20px !important;
+    }
+    .btn-secondary,
+    .btn-warning,
+    .btn-danger{
+        width: 80px;
+    }
+    .form{
+        width: 40vw;
+    }
+    form{
+        width: 70%;
+    }
+    .details{
+        width: 40vw;
+    }
+    .filter{
+        width: 30%;
+     }
+    
+ }
+@media (min-width: 992px) { 
+    table{
+        width:60%
+    }
+    .form{
+        width: 25vw;
+    }
+ }
+
+

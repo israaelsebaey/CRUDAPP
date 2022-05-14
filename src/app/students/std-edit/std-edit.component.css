@@ -1,0 +1,29 @@
+.container{
+    width: 60%;
+    margin-top: 70px !important;
+    flex-direction: column;
+}
+
+.input-group{  
+    margin-top: 25px;
+}
+.btns{
+    margin-top: 25px;
+}
+.btn{
+    background-color: #f8d375;
+    border: 1px solid #e7c56d;  
+    margin-top: 10px;
+    border-radius: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+   
+    
+}
+.btn:hover{
+    background-color: #f8d681;
+    border: 1px solid #f8d681;
+}
+

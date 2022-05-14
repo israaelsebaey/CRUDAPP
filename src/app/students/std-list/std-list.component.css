@@ -1,0 +1,25 @@
+.container{
+    flex-direction: column;
+    
+}
+.btn-warning{
+    background-color: #fd974f;
+    border: 1px solid #fd974f;
+    color: #fff;
+}
+.btn-warning:hover{
+    background-color: #f09554;
+    border: 1px solid #f09554;    
+}
+
+img{
+    margin-top: 100px;
+    width: 150px;
+    height: 150px;
+}
+.filter{
+   margin-bottom: -30px;    
+}
+.filter input{
+    height: 45px;
+}

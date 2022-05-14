@@ -1,0 +1,25 @@
+.container{
+    width: 60%;
+    margin-top: 70px !important;
+    flex-direction: column;
+}
+
+.input-group{
+   
+    margin-top: 25px;
+}
+.btn{
+    margin-top: 25px;
+    border-radius: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-color: #b8debb;
+    border: 1px solid #7ccc9b;   
+}
+.btn:hover{
+    background-color: #99cfae;
+}
+
+

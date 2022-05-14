@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="d-flex filter">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="term">
+    </div>   
+     <table class="mt-5 shadow-lg" *ngIf="students.length>0">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Operations</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>    
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of students | filter:term ;let i=index">
+               <td>{{i+1}}</td> 
+               <td>{{item.id}}</td>
+               <td>{{item.name}}</td>
+               <td>{{item.age}}</td>
+               <td>
+                <button class="btn btn-secondary" [routerLink]="['/students/details',item.id]">Details</button>
+               </td>
+               <td>
+                <button class="btn btn-warning" [routerLink]="['/students/edit',item.id]">Edit</button>
+               </td>
+               <td>
+                <button class="btn btn-danger"  [routerLink]="['/students/delete',item.id]">Delete</button>
+               </td>
+            </tr>
+            <tr class="lastTR">
+                <td colspan="7">
+                    <button class="btn add" [routerLink]="['/students/add']" >Add</button>
+                </td>
+            </tr>
+        </tbody>                
+    </table> 
+   
+</div>

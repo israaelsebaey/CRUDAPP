@@ -1,0 +1,18 @@
+.container{
+    margin-top: 100px;
+    height: 220px;   
+}
+.btn
+{
+    font-weight: 500;
+    color: #76D4BD;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: -6px;
+    margin-right: 10px;
+    padding: 0;
+}
+.btn:hover{
+   color: #69c1ab; 
+}
+
